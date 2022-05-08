@@ -2,8 +2,8 @@
 module.exports.overlaySchema = {
   "type": "object",
   "properties": {
-    "inputVideoPath": { "type": "string", "pattern": ".*.mp4$" },
-    "duration": { "type": "number" },
+    "inputVideoPath": { "type": "string", "pattern": ".*[.]mp4$"  },
+    "duration": { "type": "number", "minimum": 0 },
     "x": { "type": "integer", "minimum": 0 },
     "y": { "type": "integer", "minimum": 0 },
     "outputVideoPath": { "type": "string", "pattern": ".*[.]mp4$" },

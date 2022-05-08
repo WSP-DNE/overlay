@@ -1,0 +1,5 @@
+test("processor test", async () => {
+  const overlayProcessor = new (require("../processor/processor"))()
+  const data = { "inputVideoPath":"test_input2.mp4", "duration":60.0, "x":1920, "y":1080, "outputVideoPath":"test_output21.mp4", "texts":[{ "textString":"Brutal, Savage, Rekt", "x":100, "y":200, "fontSize":32, "fontColor":"0xFFFFFF", "startTime":50.0, "endTime":60.0 }, { "textString":"super saiyan", "x":0, "y":200, "fontSize":32, "fontColor":"0xFFFFFF", "startTime":24.0, "endTime":26.0 }] }
+  expect(await overlayProcessor.process(data)).toBe("ffmpeg -i test_input2.mp4 -vf drawtext=\"enable='between(t,50,60)':text='Brutal, Savage, Rekt':fontColor=0xFFFFFF:fontSize=32:x=100:y=200\" drawtext=\"enable='between(t,24,26)':text='super saiyan':fontColor=0xFFFFFF:fontSize=32:x=0:y=200\" test_output21.mp4");
+});
