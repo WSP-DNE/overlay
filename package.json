@@ -1,0 +1,27 @@
+{
+  "name": "overlay",
+  "version": "1.0.0",
+  "description": "Overlay on video clip using ffmpeg",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WSP-WhiteSPIRIT/overlay.git"
+  },
+  "keywords": [
+    "overlay"
+  ],
+  "author": "WSP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WSP-WhiteSPIRIT/overlay/issues"
+  },
+  "homepage": "https://github.com/WSP-WhiteSPIRIT/overlay#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "jsonschema": "^1.4.0"
+  }
+}
